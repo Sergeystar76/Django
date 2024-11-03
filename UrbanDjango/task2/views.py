@@ -5,7 +5,9 @@ from django.views.generic import TemplateView
 # Create your views here.
 
 def func_template(request):
-    return render(request,'func_template.html')
+    return render(request, 'func_template.html')
+
 
 class Template(TemplateView):
-   template_name = 'class_template.html'
+    template_name = 'class_template.html'
+
