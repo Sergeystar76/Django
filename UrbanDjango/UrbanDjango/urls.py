@@ -19,12 +19,16 @@ from django.urls import path
 from task2.views import func_template, Template
 from django.views.generic import TemplateView
 from task4.views import platform, games, cart
+from task5.views import sign_up_by_html, sign_up_by_django
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', func_template),
-    path('1/', Template.as_view()),
-    path('platform/', platform),
-    path('platform/games/', games),
-    path('platform/cart/', cart),
+    path('django/', sign_up_by_django),
+    path('', sign_up_by_html)
+    # path('', func_template),
+    # path('1/', Template.as_view()),
+    # path('platform/', platform),
+    # path('platform/games/', games),
+    # path('platform/cart/', cart),
 ]
